@@ -7,10 +7,12 @@ app = Flask(__name__)
 CORS(app)
 
 # URL「/」に対応して処理する関数
-@app.route("/")
-def index():
+@app.route("/help")
+#def index():
     # 戻り値がそのままWebサイトに表示される。
-    return jsonify({"result":"This is Backend API Server."})
+#    return jsonify({"result":"This is MY Backend API Server."})
+def help():
+    return "This is Help Page!!"
 
 
 # データ検索用関数
