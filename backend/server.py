@@ -10,8 +10,12 @@ CORS(app)
 @app.route("/")
 def index():
     # 戻り値がそのままWebサイトに表示される。
-    return jsonify({"result":"This is Backend API Server."})
+    return jsonify({"result":"This is My Backend API Server."})
 
+@app.route("/help")
+def help():
+    # 戻り値がそのままWebサイトに表示される。
+    return "This is Help Page!!"
 
 # データ検索用関数
 # URLルーティングの<income>,<rooms>,<ages>がそれぞれ関数の引数に入ってくる。
@@ -35,4 +39,3 @@ def calculate(income,rooms,ages):
 # サーバ起動用の設定
 if __name__ == "__main__":
     app.run(debug=True)
-
