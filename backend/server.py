@@ -7,15 +7,13 @@ app = Flask(__name__)
 CORS(app)
 
 # URL「/」に対応して処理する関数
-@app.route("/")
-def index():
-    # 戻り値がそのままWebサイトに表示される。
-    return jsonify({"result":"This is My Backend API Server."})
-
 @app.route("/help")
-def help():
+#def index():
     # 戻り値がそのままWebサイトに表示される。
+#    return jsonify({"result":"This is MY Backend API Server."})
+def help():
     return "This is Help Page!!"
+
 
 # データ検索用関数
 # URLルーティングの<income>,<rooms>,<ages>がそれぞれ関数の引数に入ってくる。
@@ -39,3 +37,4 @@ def calculate(income,rooms,ages):
 # サーバ起動用の設定
 if __name__ == "__main__":
     app.run(debug=True)
+
