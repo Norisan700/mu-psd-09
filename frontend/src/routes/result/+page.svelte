@@ -1,13 +1,18 @@
 <script>
-  // ここで特別なスクリプトは必要ありません
+  let resultImage = "path_to_identified_flower_image.jpg"; // ここに実際の画像パスを設定
+  let flowerName = "バラ"; // 花の名前を設定
 </script>
 
 <main>
-  <h1>画像認識アプリ</h1>
+  <h1>結果</h1>
+  
+  <div>
+    <img src={resultImage} alt="結果画像" width="300">
+    <h2>{flowerName}</h2>
+  </div>
   
   <nav>
     <a href="/input">検索</a>
-    <a href="/about">使い方</a>
   </nav>
 </main>
 
@@ -15,6 +20,12 @@
   main {
     text-align: center;
     padding: 20px;
+  }
+
+  img {
+    margin: 20px auto;
+    display: block;
+    border: 2px solid gray;
   }
 
   nav a {
