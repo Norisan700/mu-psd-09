@@ -3,7 +3,7 @@
 </script>
 
 <main>
-  <h1>画像認識アプリ</h1>
+  <h1>画像判定アプリ</h1>
   
   <nav>
     <a href="/input">検索</a>
