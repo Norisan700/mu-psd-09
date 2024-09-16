@@ -5,18 +5,18 @@ from django.urls import include, path
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("flower/", include("flower.urls")),
+    path("flower/", include("mu-psd-09.urls")),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 from django.urls import path
 
-from . import views
+from . import server
 
 app_name = "flower"
 
 urlpatterns = [
-    path("showall/", views.showall, name="showall"),
-    path("upload/", views.upload, name="upload"),
-    path("result/", views.result, name="result"),
+    path("showall/", server.showall, name="showall"),
+    path("upload/", server.upload, name="upload"),
+    path("result/", server.result, name="result"),
 ]

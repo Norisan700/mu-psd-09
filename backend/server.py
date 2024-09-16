@@ -4,9 +4,10 @@ from PIL import Image
 import joblib
 import pandas as pd
 import io
+import os
 
 from django.shortcuts import redirect, render
-from .forms import ImageForm
+from forms import ImageForm
 
 # Create your views here.
 from .models import Image
